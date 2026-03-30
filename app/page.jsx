@@ -30,14 +30,18 @@
     }, []);
 
     const { data, error, isLoading } = useQuery({
-      queryKey: ["weather", city],
+      queryKey: ["weather", city , loc],
       queryFn: async () => {
+
+        if(city){
+          const location = await fetchCity(city);
+          const weather = await fetchWeatherData(location);
+          return weather;
+        }
+
         if(loc){
           return await fetchWeatherData(loc);
         }
-        const location = await fetchCity(city);
-        const weather = await fetchWeatherData(location);
-        return weather;
       },
       enabled: !!loc || !!city,
       staleTime: 10 * 60 * 1000,
