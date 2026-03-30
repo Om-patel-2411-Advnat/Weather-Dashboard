@@ -1,3 +1,5 @@
+'use client'
+
 export default function NotFound({setCity}){
     return(
         <div className="h-screen w-full bg-black/20 flex justify-center items-center flex-col gap-5">
