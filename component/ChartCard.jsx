@@ -26,7 +26,7 @@ export default function ChartCard({data}){
 
     return (
         <div className="h-full w-full backdrop-blur-sm rounded-xl border border-white/30 flex flex-col gap-5">
-            <p className="flex text-3xl items-center gap-2 text-white/80 font-bold px-5 pt-5">
+            <p className="flex text-xl sm:text-3xl items-center gap-2 text-white/80 font-bold px-5 pt-5">
                 Hourly Temperature  
             </p>
             <div className="w-full h-64">

@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <QueryProvider>
+          <div id="modal-root"></div>
           {children}
         </QueryProvider>
       </body>

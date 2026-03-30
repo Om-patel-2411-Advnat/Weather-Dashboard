@@ -36,47 +36,47 @@ export default function WeatherStates({data}){
                     <span className="relative h-10 w-10">
                         <Image src={wind} alt="Wind" fill className="object-contain invert"/>
                     </span> 
-                    <span className="text-xl text-white/90">Wind</span>
+                    <span className="text-md sm:text-xl text-white/90">Wind</span>
                 </p>
-                <p className="text-slate-200 mx-auto mt-auto">
-                    <span className="text-3xl font-bold">{windData}</span>
-                    <span className="text-lg">{windUnit}</span>
+                <p className="text-slate-200 mx-auto mt-auto flex gap-1">
+                    <span className="text-lg sm:text-3xl font-bold">{windData}</span>
+                    <span className="text-sm sm:text-lg flex items-end mb-1 sm:mb-0">{windUnit}</span>
                 </p>
             </div>
             <div className="h-35 w-full backdrop-blur-sm rounded-xl border border-white/30 p-5 flex flex-col">
-                <p className="flex gap-3 justify-center items-center ">
-                    <span className="relative h-8 w-8">
+                <p className="flex  gap-1 sm:gap-3 justify-center items-center ">
+                    <span className="relative h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0">
                         <Image src={humidity} alt="Humidity" fill className="object-contain" />
                     </span> 
-                    <span className="text-xl text-white/90">Humidity</span>
+                    <span className="text-md sm:text-xl text-white/90">Humidity</span>
                 </p>
-                <p className="text-slate-200 mx-auto mt-auto">
-                    <span className="text-3xl font-bold">{humidityData}</span>
-                    <span className="text-lg">{humidityUnit}</span>
+                <p className="text-slate-200 mx-auto mt-auto flex gap-1">
+                    <span className="text-lg sm:text-3xl font-bold">{humidityData}</span>
+                    <span className="text-sm sm:text-lg flex items-end mb-1 sm:mb-0">{humidityUnit}</span>
                 </p>
             </div>
             <div className="h-35 w-full backdrop-blur-sm rounded-xl border border-white/30 p-5 flex flex-col">
                 <p className="flex gap-3 justify-center items-center ">
-                    <span className="relative h-8 w-8">
+                    <span className="relative h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0 ">
                         <Image src={pressure} alt="Pressure" fill className="object-contain" />
                     </span> 
-                    <span className="text-xl text-white/90">Pressure</span>
+                    <span className="text-md sm:text-xl text-white/90">Pressure</span>
                 </p>
-                <p className="text-slate-200 mx-auto mt-auto">
-                    <span className="text-3xl font-bold">{pressureData}</span>
-                    <span className="text-lg">{pressureUnit}</span>
+                <p className="text-slate-200 mx-auto mt-auto flex gap-1">
+                    <span className="text-lg sm:text-3xl font-bold">{pressureData}</span>
+                    <span className="text-sm sm:text-lg flex items-end mb-1 sm:mb-0">{pressureUnit}</span>
                 </p>
             </div>
             <div className="h-35 w-full backdrop-blur-sm rounded-xl border border-white/30 p-5 flex flex-col">
-                <p className="flex gap-3 justify-center items-center ">
-                    <span className="relative h-8 w-8">
+                <p className="flex gap-3 justify-center items-center">
+                    <span className="relative h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0">
                         <Image src={visibility} alt="Visibility" fill className="object-contain" />
                     </span> 
-                    <span className="text-xl text-white/90">Visibility</span>
+                    <span className="text-md sm:text-xl text-white/90">Visibility</span>
                 </p>
-                <p className="text-slate-200 mx-auto mt-auto">
-                    <span className="text-3xl font-bold">{visibilityData}</span>
-                    <span className="text-lg">{visibilityUnit}</span>
+                <p className="text-slate-200 mx-auto mt-auto flex gap-1">
+                    <span className="text-lg sm:text-3xl font-bold">{visibilityData}</span>
+                    <span className="text-sm sm:text-lg flex items-end mb-1 sm:mb-0">{visibilityUnit}</span>
                 </p>
             </div>
         </div>

@@ -33,7 +33,7 @@ export default function BgImage({code}){
 
     return(
         <div className='fixed inset-0 -z-10'>
-            <Image src={logo} alt={weatherType} fill priority className='object-cover' />
+            <Image src={logo} alt={weatherType} fill sizes='100vw' priority className='object-cover' />
             <div className="absolute inset-0 bg-black/20" />
         </div>
     )

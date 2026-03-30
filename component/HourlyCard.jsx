@@ -1,7 +1,7 @@
 import { MdAccessTime } from "react-icons/md";
 import HourlyBlock from "./viewBlocks.jsx/HourlyBlock";
 
-export default function HourlyCard({data}){
+export default function HourlyCard({ data, tempState }){
 
     const currentTime = data?.current_weather?.time;
 
@@ -26,6 +26,7 @@ export default function HourlyCard({data}){
                     <HourlyBlock
                         key={i}
                         time={time}
+                        tempState={tempState}
                         temp={data.hourly.temperature_2m[startIndex + i]}
                         code={data.hourly.weathercode[startIndex + i]}
                     />

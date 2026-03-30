@@ -1,7 +1,7 @@
 import { FaCalendarAlt } from "react-icons/fa";
 import WeeklyBar from "./viewBlocks.jsx/WeeklyBar";
 
-export default function WeeklyCard({data}){
+export default function WeeklyCard({ data, tempState }){
 
     const days = data?.daily?.time;
 
@@ -18,6 +18,7 @@ export default function WeeklyCard({data}){
                     <WeeklyBar 
                         key={i}
                         date = {day}
+                        tempState={tempState}
                         maxTemp = {data.daily.temperature_2m_max[i]}
                         minTemp = {data.daily.temperature_2m_min[i]}
                         code = {data.daily.weathercode[i]}

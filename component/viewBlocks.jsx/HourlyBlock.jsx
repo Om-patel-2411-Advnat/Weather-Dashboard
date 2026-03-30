@@ -1,6 +1,6 @@
 import WeatherIcon from "./weatherIcon";
 
-export default function HourlyBlock({ time, temp, code }) {
+export default function HourlyBlock({ time, temp, code, tempState }) {
 
     const formattedTime = new Date(time).toLocaleTimeString([], {
         hour: "numeric",
@@ -13,7 +13,7 @@ export default function HourlyBlock({ time, temp, code }) {
             <div className="h-16 w-16 justify-center items-center">
                 <WeatherIcon code={code} />
             </div>
-            <p className="text-white/90">{temp}°C</p>
+            <p className="text-white/90">{temp}°{tempState}</p>
         </div>
     )
 }

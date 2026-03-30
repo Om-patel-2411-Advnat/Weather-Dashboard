@@ -1,6 +1,6 @@
 import WeatherIcon from "./weatherIcon"
 
-export default function WeeklyBar({date , maxTemp , minTemp , code}){
+export default function WeeklyBar({ date, maxTemp, minTemp, code, tempState }){
 
     const dayName = new Date(date).toLocaleDateString("en-US" ,{
         weekday : 'short'
@@ -12,8 +12,8 @@ export default function WeeklyBar({date , maxTemp , minTemp , code}){
             <div className="h-10 w-10 flex justify-center items-center">
                 <WeatherIcon code={code} />
             </div>
-            <p>{minTemp}°C</p>
-            <p>{maxTemp}°C</p>
+            <p>{minTemp}°{tempState}</p>
+            <p>{maxTemp}°{tempState}</p>
         </div>
     )
 }

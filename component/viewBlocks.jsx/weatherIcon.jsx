@@ -32,7 +32,7 @@ export default function WeatherIcon({code}){
 
     return (
         <div className="relative w-full h-full">
-            <Image src={logo} alt={weatherType} fill className="object-cover" />
+            <Image src={logo} alt={weatherType} fill sizes="50px" className="object-cover" />
         </div>
     )
 }
