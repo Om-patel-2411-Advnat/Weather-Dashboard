@@ -10,7 +10,6 @@
   import BgImage from "@/component/BgImage";
   import Loading from "./loading";
   import NotFound from "./not-found";
-  import { revalidatePath } from "next/cache";
 
   export default function Home() {
     const [city, setCity] = useState('');
