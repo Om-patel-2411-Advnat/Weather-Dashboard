@@ -20,13 +20,17 @@ export default function LikedCity({setCity}){
         setIsOpen(true);
     }
 
-    function HandleFormData (e){
-        e.preventDefault();
+    function HandleFormData (cityName){
 
-        const formData = new FormData(e.target);
-        const cityName = formData.get('city-Name');
+        const alreadyExists = cityData.some(
+            (city) => city.trim().toLowerCase() === cityName.trim().toLowerCase()
+        );
 
-        if(!cityName) return ;
+        if(alreadyExists){
+            alert("City already exists in your list");
+            setIsOpen(false);
+            return ;
+        }
 
         setCityData(prevData => [...prevData , cityName]);
         setIsOpen(false);
@@ -47,7 +51,7 @@ export default function LikedCity({setCity}){
                     </p>           
                     <p 
                         onClick={HandleModalOpen}
-                        className="h-10 px-5 gap-2 rounded-full border border-white/30 bg-white/50 text-stone-700 font-bold flex justify-center items-center"
+                        className="h-10 px-5 gap-2 rounded-full border border-white/30 bg-white/50 text-stone-700 font-bold flex justify-center items-center cursor-pointer"
                     >
                         <span>Add</span>+
                     </p>
@@ -55,7 +59,7 @@ export default function LikedCity({setCity}){
                 <ul className="h-full w-full mt-5 flex flex-col gap-2">
                     {cityData.map(city => (
                         <li 
-                            onClick={(e) => setCity(city)}
+                            onClick={() => setCity(city)}
                             key={city}
                             className="group w-full h-10 mx-3 border-b border-white/30 flex items-center px-3 text-slate-200 font-bold text-lg"
                         >
